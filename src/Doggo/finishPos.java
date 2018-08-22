@@ -17,15 +17,15 @@ public class finishPos {
 			{
 				
 			}
-			if(array[i-1] == 1)
+			if(array[i-1]%10 == 1 &&(i<11||i>19))
 			{
 				newString += array[i-1]+"st, ";
 			}
-			if(array[i-1] == 2)
+			if(array[i-1]%10 == 2 &&(i<11||i>19))
 			{
 				newString += array[i-1]+"nd, ";
 			}
-		if(array[i-1] == 3)
+		if(array[i-1]%10 == 3 &&(i<11||i>19))
 			{
 				newString += array[i-1]+"rd, ";
 			}
@@ -33,11 +33,13 @@ public class finishPos {
 		{
 			newString += array[i-1]+"th";
 		}
-			else if (i!=pos&&!(array[i-1] == 2)&&!(array[i-1] == 0)&&!(array[i-1] == 1)&&!(array[i-1] == 3))
+		if(i>10 && i<20) {
+			newString+= array[i-1]+"th, ";
+		}
+			else if (i!=pos&&!(array[i-1]%10 == 2)&&!(array[i-1]%10 == 1)&&!(array[i-1]%10 == 3)&&(i<11||i>19)&&i!=100)
 			{
 				newString += array[i-1]+"th, ";
 			}
-			
 		}	
 		return newString;
 	}
