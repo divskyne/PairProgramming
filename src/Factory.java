@@ -1,6 +1,15 @@
 
 public class Factory
 {
+	int result;
+	public Factory()
+	{
+		
+	}
+	public Factory(int res)
+	{
+		result = res;
+	}
 	public String returnFactorial (int bignumber)
 	{
 		int variable = 2;
@@ -23,5 +32,9 @@ public class Factory
 			bignumber = bignumber/variable;
 			variable++;
 		}
+	}
+	public String returnFactorial ()
+	{
+		return returnFactorial(this.result);
 	}
 }
