@@ -1,3 +1,4 @@
+package facto;
 
 public class Factory
 {
